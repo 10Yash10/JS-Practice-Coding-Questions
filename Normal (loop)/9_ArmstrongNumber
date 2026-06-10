@@ -1,0 +1,26 @@
+// const number = 1634;
+const number = 153;
+
+function power(number, times) {
+  let p = 1;
+  for (i = 0; i < times; i++) {
+    p *= number;
+  }
+
+  return p;
+}
+
+function isArmstrongNumber(num) {
+  let sum = 0;
+  const temp = num;
+  let len = num.toString().length;
+
+  while (num !== 0) {
+    sum = sum + power(num % 10, len);
+    num = (num / 10) | 0;
+  }
+
+  return sum == temp;
+}
+
+console.log(isArmstrongNumber(number));
