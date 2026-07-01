@@ -15,3 +15,4 @@ function printFibonacci(n) {
 }
 
 console.log(printFibonacci(6));
+
